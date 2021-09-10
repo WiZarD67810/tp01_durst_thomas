@@ -11,6 +11,10 @@ body {
     float: left;
 }
 
+.TP1-span {
+    color: rgb(0, 104, 212);
+}
+
 @media only screen and (max-width: 974px) {
     .TP1-float {
         width: 100%;
