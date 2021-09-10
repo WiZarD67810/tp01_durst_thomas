@@ -30,7 +30,7 @@ function onChecking(event) {
     let pwd1 = document.getElementById("password").value;
     let pwd2 = document.getElementById("password2").value;
 
-    if (pwd1 != pwd2) {
+    if (pwd1 != pwd2 || pwd1 === "" || pwd2 === "") {
         event.preventDefault();
         event.stopPropagation();
 
@@ -39,6 +39,6 @@ function onChecking(event) {
     } else {
         alert("Le formulaire a bien été envoyé !");
 
-        return true
+        return true;
     }
 }

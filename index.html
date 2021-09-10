@@ -17,14 +17,14 @@
                     <div class="TP1-float">
                         <div class="form-group my-2 mx-2">
                             <label for="lastName" class="fs-5 ms-2 mb-1">Nom <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="lastName" id="lastName" class="form-control" onkeyup="this.value = this.value.toUpperCase()" placeholder="Ton nom..." required>
+                            <input type="text" name="lastName" id="lastName" class="form-control" pattern="[a-zA-Z ]{1,}" onkeyup="this.value = this.value.toUpperCase()" placeholder="Ton nom..." required>
                             <div class="invalid-feedback">
                                 Le nom est obligatoire !
                             </div>
                         </div>
                         <div class="form-group my-2 mx-2">
                             <label for="forName" class="fs-5 ms-2 mb-1">Prénom <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="forName" id="forName" class="form-control" placeholder="Ton prénom..." required>
+                            <input type="text" name="forName" id="forName" pattern="[a-zA-Z ]{1,}" class="form-control" placeholder="Ton prénom..." required>
                             <div class="invalid-feedback">
                                 Le prénom est obligatoire !
                             </div>
@@ -45,7 +45,7 @@
                     <div class="TP1-float">
                         <div class="form-group my-2 mx-2">
                             <label for="adresse" class="fs-5 ms-2 mb-1">Adresse <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="adresse" id="adresse" class="form-control" placeholder="Ton adresse..." required>
+                            <input type="text" name="adresse" id="adresse" pattern="[a-zA-Z0-9 ]{1,}" class="form-control" placeholder="Ton adresse..." required>
                             <div class="invalid-feedback">
                                 L'adresse est obligatoire !
                             </div>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group my-2 mx-2">
                             <label for="city" class="fs-5 ms-2 mb-1">Ville <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="city" id="city" class="form-control" placeholder="Ta ville..." required>
+                            <input type="text" name="city" id="city" pattern="[a-zA-Z]{1,}" class="form-control" placeholder="Ta ville..." required>
                             <div class="invalid-feedback">
                                 La ville est obligatoire !
                             </div>
@@ -68,7 +68,7 @@
 
                     <div class="form-group my-2 mx-2">
                         <label for="mail" class="fs-5 ms-2 mb-1">Adresse mail <span class="TP1-span">*</span> :</label>
-                        <input type="email" name="mail" id="mail" class="form-control" placeholder="Ton adresse e-mail..." required>
+                        <input type="email" name="mail" id="mail" pattern="[a-zA-Z\.0-9]+@+[a-z]+.+[a-z]" class="form-control" placeholder="Ton adresse e-mail..." required>
                         <div class="invalid-feedback">
                             L'e-mail est obligatoire ! Ex : jean.dupond@gmail.com
                         </div>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="form-group my-2 mx-2">
                         <label for="username" class="fs-5 ms-2 mb-1">Login <span class="TP1-span">*</span> :</label>
-                        <input type="text" name="username" id="username" class="form-control" placeholder="Ton login..." required>
+                        <input type="text" name="username" id="username" pattern="[a-zA-Z0-9]{1,}" class="form-control" placeholder="Ton login..." required>
                         <div class="invalid-feedback">
                             Le login est obligatoire !
                         </div>
@@ -91,7 +91,7 @@
                     <div class="TP1-float">
                         <div class="form-group my-2 mx-2">
                             <label for="password" class="fs-5 ms-2 mb-1">Mot de passe <span class="TP1-span">*</span> :</label>
-                            <input type="password" name="password" id="password" class="form-control" placeholder="Ton mot de passe..." required>
+                            <input type="password" name="password" id="password" pattern="[a-zA-Z0-9]{6,}" class="form-control" placeholder="Ton mot de passe..." required>
                             <div class="invalid-feedback">
                                 Le mot de passe est obligatoire !
                             </div>
@@ -101,7 +101,7 @@
                     <div class="TP1-float">
                         <div class="form-group my-2 mx-2">
                             <label for="password2" class="fs-5 ms-2 mb-1">Confirmation du mot de passe <span class="TP1-span">*</span> :</label>
-                            <input type="password" name="password2" id="password2" class="form-control" placeholder="Ton mot de passe..." required>
+                            <input type="password" name="password2" id="password2" pattern="[a-zA-Z0-9]{6,}" class="form-control" placeholder="Ton mot de passe..." required>
                             <div class="invalid-feedback">
                                 Le mot de pass est obligatoire ou différent du premier mot de passe !
                             </div>
