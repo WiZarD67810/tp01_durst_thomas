@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>TP01</title>
         <link rel="stylesheet" href="./style/style.css">
         <!-- Bootstrap -->
@@ -10,111 +11,109 @@
         <link href="http://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <h1 class="fs-1 text-uppercase text-light text-center mt-4">Authentification</h1>
-            <div class="w-100 border mx-auto mt-4 mb-5 bg-light">
-                <form action="#" class="mx-5 mt-3 mb-3 needs-validation" method="POST" onsubmit="return onChecking(event)" novalidate>
-                    <div class="TP1-float">
-                        <div class="form-group my-2 mx-2">
-                            <label for="lastName" class="fs-5 ms-2 mb-1">Nom <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="lastName" id="lastName" class="form-control" pattern="[a-zA-Z ]{1,}" onkeyup="this.value = this.value.toUpperCase()" placeholder="Ton nom..." required>
-                            <div class="invalid-feedback">
-                                Le nom est obligatoire !
-                            </div>
-                        </div>
-                        <div class="form-group my-2 mx-2">
-                            <label for="forName" class="fs-5 ms-2 mb-1">Prénom <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="forName" id="forName" pattern="[a-zA-Z ]{1,}" class="form-control" placeholder="Ton prénom..." required>
-                            <div class="invalid-feedback">
-                                Le prénom est obligatoire !
-                            </div>
-                        </div>
-                        <div class="form-group my-2 mx-2">
-                            <label for="civility" class="fs-5 ms-2 mb-1">Civilité <span class="TP1-span">*</span> :</label>
-                            <select name="civility" id="civility" class="form-select" required>
-                                <option value="">Choisisez votre civilité</option>
-                                <option value="1">M</option>
-                                <option value="2">Mme</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                La civilité est obligatoire !
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="TP1-float">
-                        <div class="form-group my-2 mx-2">
-                            <label for="adresse" class="fs-5 ms-2 mb-1">Adresse <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="adresse" id="adresse" pattern="[a-zA-Z0-9 ]{1,}" class="form-control" placeholder="Ton adresse..." required>
-                            <div class="invalid-feedback">
-                                L'adresse est obligatoire !
-                            </div>
-                        </div>
-                        <div class="form-group my-2 mx-2">
-                            <label for="cityCode" class="fs-5 ms-2 mb-1">Code postal <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="cityCode" id="cityCode" maxlength="5" class="form-control" placeholder="Ton code postal..." pattern="[0-9]{5}" required>
-                            <div class="invalid-feedback">
-                                Le code postal est obligatoire !
-                            </div>
-                        </div>
-                        <div class="form-group my-2 mx-2">
-                            <label for="city" class="fs-5 ms-2 mb-1">Ville <span class="TP1-span">*</span> :</label>
-                            <input type="text" name="city" id="city" pattern="[a-zA-Z]{1,}" class="form-control" placeholder="Ta ville..." required>
-                            <div class="invalid-feedback">
-                                La ville est obligatoire !
-                            </div>
-                        </div>
-                    </div>
-
+        <div class="container mt-5 mb-5">
+            <h2 class="mt-2 mb-3 text-light mx-auto w-title-account">Création de compte</h2>
+            <form action="#" class="width mx-auto border bg-light px-3 py-2 needs-validation" method="POST" onsubmit="return onChecking(event)" novalidate>
+                <div class="TP1-float">
                     <div class="form-group my-2 mx-2">
-                        <label for="mail" class="fs-5 ms-2 mb-1">Adresse mail <span class="TP1-span">*</span> :</label>
-                        <input type="email" name="mail" id="mail" pattern="[a-zA-Z\.0-9]+@+[a-z]+.+[a-z]" class="form-control" placeholder="Ton adresse e-mail..." required>
+                        <label for="lastName" class="fs-5 ms-2 mb-1">Nom <span class="TP1-span">*</span> :</label>
+                        <input type="text" name="lastName" id="lastName" class="form-control" pattern="[a-zA-Z ]{1,}" onkeyup="this.value = this.value.toUpperCase()" placeholder="Ton nom..." required>
                         <div class="invalid-feedback">
-                            L'e-mail est obligatoire ! Ex : jean.dupond@gmail.com
+                            Le nom est obligatoire !
                         </div>
                     </div>
                     <div class="form-group my-2 mx-2">
-                        <label for="phone" class="fs-5 ms-2 mb-1">Téléphone <span class="TP1-span">*</span> :</label>
-                        <input type="tel" name="phone" id="phone" maxlength="10" class="form-control" placeholder="Ton numéro de téléphone..." pattern="[0-9]{10}" required>
+                        <label for="forName" class="fs-5 ms-2 mb-1">Prénom <span class="TP1-span">*</span> :</label>
+                        <input type="text" name="forName" id="forName" pattern="[a-zA-Z ]{1,}" class="form-control" placeholder="Ton prénom..." required>
                         <div class="invalid-feedback">
-                            Le numéro de téléphone est obligatoire ! Ex : 0312345678
+                            Le prénom est obligatoire !
                         </div>
                     </div>
                     <div class="form-group my-2 mx-2">
-                        <label for="username" class="fs-5 ms-2 mb-1">Login <span class="TP1-span">*</span> :</label>
-                        <input type="text" name="username" id="username" pattern="[a-zA-Z0-9]{1,}" class="form-control" placeholder="Ton login..." required>
+                        <label for="civility" class="fs-5 ms-2 mb-1">Civilité <span class="TP1-span">*</span> :</label>
+                        <select name="civility" id="civility" class="form-select" required>
+                            <option value="">Choisisez votre civilité</option>
+                            <option value="1">M</option>
+                            <option value="2">Mme</option>
+                        </select>
                         <div class="invalid-feedback">
-                            Le login est obligatoire !
+                            La civilité est obligatoire !
                         </div>
                     </div>
-                    
-                    <div class="TP1-float">
-                        <div class="form-group my-2 mx-2">
-                            <label for="password" class="fs-5 ms-2 mb-1">Mot de passe <span class="TP1-span">*</span> :</label>
-                            <input type="password" name="password" id="password" pattern="[a-zA-Z0-9]{6,}" class="form-control" placeholder="Ton mot de passe..." required>
-                            <div class="invalid-feedback">
-                                Le mot de passe est obligatoire !
-                            </div>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="TP1-float">
-                        <div class="form-group my-2 mx-2">
-                            <label for="password2" class="fs-5 ms-2 mb-1">Confirmation du mot de passe <span class="TP1-span">*</span> :</label>
-                            <input type="password" name="password2" id="password2" pattern="[a-zA-Z0-9]{6,}" class="form-control" placeholder="Ton mot de passe..." required>
-                            <div class="invalid-feedback">
-                                Le mot de pass est obligatoire ou différent du premier mot de passe !
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="TP1-float">
                     <div class="form-group my-2 mx-2">
-                        <p class="fs-5 TP1-span">* Champs obligatoire</p>
+                        <label for="adresse" class="fs-5 ms-2 mb-1">Adresse <span class="TP1-span">*</span> :</label>
+                        <input type="text" name="adresse" id="adresse" pattern="[a-zA-Z0-9 ]{1,}" class="form-control" placeholder="Ton adresse..." required>
+                        <div class="invalid-feedback">
+                            L'adresse est obligatoire !
+                        </div>
                     </div>
-                    
-                    <button type="submit" class="btn btn-success w-100 my-2 mx-2">Valider</button>
-                </form>
-            </div>
+                    <div class="form-group my-2 mx-2">
+                        <label for="cityCode" class="fs-5 ms-2 mb-1">Code postal <span class="TP1-span">*</span> :</label>
+                        <input type="text" name="cityCode" id="cityCode" maxlength="5" class="form-control" placeholder="Ton code postal..." pattern="[0-9]{5}" required>
+                        <div class="invalid-feedback">
+                            Le code postal est obligatoire !
+                        </div>
+                    </div>
+                    <div class="form-group my-2 mx-2">
+                        <label for="city" class="fs-5 ms-2 mb-1">Ville <span class="TP1-span">*</span> :</label>
+                        <input type="text" name="city" id="city" pattern="[a-zA-Z]{1,}" class="form-control" placeholder="Ta ville..." required>
+                        <div class="invalid-feedback">
+                            La ville est obligatoire !
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group my-2 mx-2">
+                    <label for="mail" class="fs-5 ms-2 mb-1">Adresse mail <span class="TP1-span">*</span> :</label>
+                    <input type="email" name="mail" id="mail" pattern="[a-zA-Z\.0-9]+@+[a-z]+.+[a-z]" class="form-control" placeholder="Ton adresse e-mail..." required>
+                    <div class="invalid-feedback">
+                        L'e-mail est obligatoire ! Ex : jean.dupond@gmail.com
+                    </div>
+                </div>
+                <div class="form-group my-2 mx-2">
+                    <label for="phone" class="fs-5 ms-2 mb-1">Téléphone <span class="TP1-span">*</span> :</label>
+                    <input type="tel" name="phone" id="phone" maxlength="10" class="form-control" placeholder="Ton numéro de téléphone..." pattern="[0-9]{10}" required>
+                    <div class="invalid-feedback">
+                        Le numéro de téléphone est obligatoire ! Ex : 0312345678
+                    </div>
+                </div>
+                <div class="form-group my-2 mx-2">
+                    <label for="username" class="fs-5 ms-2 mb-1">Login <span class="TP1-span">*</span> :</label>
+                    <input type="text" name="username" id="username" pattern="[a-zA-Z0-9]{1,}" class="form-control" placeholder="Ton login..." required>
+                    <div class="invalid-feedback">
+                        Le login est obligatoire !
+                    </div>
+                </div>
+                
+                <div class="TP1-float">
+                    <div class="form-group my-2 mx-2">
+                        <label for="password" class="fs-5 ms-2 mb-1">Mot de passe <span class="TP1-span">*</span> :</label>
+                        <input type="password" name="password" id="password" pattern="[a-zA-Z0-9]{6,}" class="form-control" placeholder="Ton mot de passe..." required>
+                        <div class="invalid-feedback">
+                            Le mot de passe est obligatoire !
+                        </div>
+                    </div>
+                </div>
+
+                <div class="TP1-float">
+                    <div class="form-group my-2 mx-2">
+                        <label for="password2" class="fs-5 ms-2 mb-1">Confirmation du mot de passe <span class="TP1-span">*</span> :</label>
+                        <input type="password" name="password2" id="password2" pattern="[a-zA-Z0-9]{6,}" class="form-control" placeholder="Ton mot de passe..." required>
+                        <div class="invalid-feedback">
+                            Le mot de pass est obligatoire ou différent du premier mot de passe !
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group my-2 mx-2">
+                    <p class="fs-5 TP1-span">* Champs obligatoire</p>
+                </div>
+                
+                <button type="submit" class="btn btn-success w-100 my-2 mx-2">Valider</button>
+            </form>
         </div>
 
         <!-- Personal script -->

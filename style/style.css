@@ -11,14 +11,30 @@ body {
     float: left;
 }
 
+.width {
+    width: 75%;
+}
+
 .TP1-span {
     color: rgb(0, 104, 212);
+}
+
+.w-title-account {
+    width: 290px;
 }
 
 @media only screen and (max-width: 974px) {
     .TP1-float {
         width: 100%;
         float: none;
+    }
+
+    .w-title-account {
+        width: 235px;
+    }
+
+    .width {
+        width: 100%;
     }
 }
 
@@ -28,6 +44,10 @@ body {
         width: 100%;
         float: none;
     }
+
+    .width {
+        width: 100%;
+    }
 }
 
 /* iPad mini portrait */
@@ -36,12 +56,20 @@ body {
         width: 100%;
         float: none;
     }
+
+    .width {
+        width: 100%;
+    }
 }
 
 /* iPhone X */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
     .TP1-float {
         width: 100%;
         float: none;
+    }
+
+    .width {
+        width: 100%;
     }
 }
